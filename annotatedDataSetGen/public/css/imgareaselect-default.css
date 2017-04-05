@@ -1,0 +1,97 @@
+div > * {
+    vertical-align: middle;
+}
+
+button {
+    margin-top: 1%;
+    margin-right: 1%;
+    margin-left: 1%;
+    height: 15%;
+}
+
+#browser {
+    width: 80%;
+    height:95vh;
+    margin-top: 3vh;
+    display: inline-block;
+}
+
+#page {
+    background: lightgray;
+    height:80.5vh;
+
+}
+
+#pageSelector {
+    height:13.5vh;
+    margin-top: 1vh;
+    text-align: center;
+}
+
+#ornaments {
+    background: lightgray;
+    width: 19%;
+    height:95vh;
+    margin-top: 3vh;
+    display: inline-block;
+    text-align: center;
+}
+
+#ornamentPreviewTitle {
+    width: 100%;
+    height:5vh;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.preview {
+    width: 94%;
+    height:85vh;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#ornamentPreview {
+    overflow-y: scroll;
+}
+
+#pagesPreview {
+    height:10vh;
+    background: lightgray;
+}
+
+#pagesPreviewTitle {
+    height:3vh;
+    margin-bottom: 0.5vh;
+}
+
+#pageBrowserPosition {
+    margin-left: 3%;
+}
+
+.ornamentsPreview {
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.pagesPreview {
+    height: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+    display: inline-block;
+    opacity: 0.7;
+}
+
+.selectedPagePreview {
+    opacity: 1.0;
+}
+
+.navigationButton {
+    height: 3vh;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}

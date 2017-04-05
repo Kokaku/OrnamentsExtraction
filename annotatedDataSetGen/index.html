@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ornaments annotation</title>
+    <link rel="stylesheet" type="text/css" href="public/css/imgareaselect-default.css" />
+    <script type="text/javascript" src="public/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="public/scripts/annotatedImageSelector.js"></script>
+</head>
+
+<body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        startAnnotation();
+    });
+    $(window).resize(function() {
+        resizeMainFrame();
+    });
+</script>
+
+<div style="height:95vh;">
+    <div id="browser">
+        <div id="page">
+            <canvas id="annotationCanvas" style="width:100%;">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+        </div>
+        <div id="pageSelector">
+            <div id="pagesPreviewTitle" class="previewTitle">
+                <input id="displayScores" type="checkbox" name="scores" onclick="displayScores();">Scores
+                <input id="ornamentsFilter" type="checkbox" name="filter" onclick="enableOrnamentsFilter();">Filter
+                <button id="newRandomPage" type="button" onclick="addNewRandomPage();">New random page</button>
+                <input class="navigationButton" type="image" src="public/css/first.png" onclick="selectFirstPage();" />
+                <input class="navigationButton" type="image" src="public/css/prev.png" onclick="selectPreviousPage();" />
+                <input class="navigationButton" type="image" src="public/css/next.png" onclick="selectNextPage();" />
+                <input class="navigationButton" type="image" src="public/css/last.png" onclick="selectLastPage();" />
+                <span id="pageBrowserPosition">0/0</span>
+                <input id="jumpPagePosition" type="text" name="pagePosition" value="1" size="6">
+                <button type="button" onclick="jumpToPage();">Jump</button>
+            </div>
+            <div id="pagesPreview" class="preview"></div>
+        </div>
+    </div>
+    <div id="ornaments">
+        <div id="ornamentPreviewTitle" class="previewTitle">
+            <select id="ornamentNature"onchange="onSelectOrnamentNature (this)">
+                <option value="Unknown">Unknown</option>
+                <option value="Bloc">Bloc</option>
+                <option value="Taille-douce">Taille-douce</option>
+                <option value="Composition">Composition</option>
+                <option value="Mixte">Mixte</option>
+            </select>
+            <select id="ornamentType" onchange="onSelectOrnamentType (this)">
+                <option value="Unknown">Unknown</option>
+                <option value="Fleuron">Fleuron</option>
+                <option value="Bandeau">Bandeau</option>
+                <option value="Lettrine">Lettrine</option>
+                <option value="Encadrement">Encadrement</option>
+                <option value="Pagination">Pagination</option>
+            </select>
+        </div>
+        <div id="ornamentPreview" class="preview"></div>
+    </div>
+</div>
+
+</body>
+
+</html>
